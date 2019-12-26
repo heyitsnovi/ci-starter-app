@@ -96,6 +96,12 @@
                 <span class="menu-title">File Manager</span>
               </a>
             </li> 
+              <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('user/admin/summernote'); ?>">
+                <i class="menu-icon mdi mdi-comment-text"></i>
+                <span class="menu-title">Summer Note</span>
+              </a>
+            </li>   
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
               <i class="menu-icon mdi mdi-account"></i>

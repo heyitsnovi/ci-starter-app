@@ -95,11 +95,37 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
- 				$data['custom_js']  = ['//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js'];
+ 
  				$data['php_includes'] = [APPPATH.'/includes/filemanager.php'];
  				$data['connector'] = base_url('user/ajaxrequest/filemanager_connector');
 				$data['view_content'] = 'filemanager/index';
 				$data['page_title'] = 'File Manager';
+				$this->load->view('layouts/main',$data);
+		}
+
+	}
+
+
+	public function summernote(){
+
+		if (!$this->ion_auth->logged_in())
+		{
+ 
+			redirect('user/auth/login', 'refresh');
+		}
+		else if (!$this->ion_auth->is_admin()) 
+		{
+ 
+			return show_error('You must be an administrator to view this page.');
+		}
+		else
+		{
+ 				$data['custom_js']  = [base_url('assets/summernote/summernote-bs4.js'),base_url('assets/summernote/summernote-ext-elfinder.js')];
+ 				$data['custom_css'] = [base_url('assets/summernote/summernote-bs4.css')];
+ 				$data['php_includes'] = [APPPATH.'/includes/summernote.php'];
+ 				$data['connector'] = base_url('user/ajaxrequest/filemanager_connector');
+				$data['view_content'] = 'summernote/index';
+				$data['page_title'] = 'Summer Note';
 				$this->load->view('layouts/main',$data);
 		}
 
