@@ -22,7 +22,7 @@
                         
                         <div class="form-group">
                                 <label for="summernote">Notes</label>
-                                <textarea id="summernote"></textarea>
+                                <textarea id="summernote" name="summernote"></textarea>
                         </div>
                   
 
