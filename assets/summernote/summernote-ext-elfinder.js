@@ -29,7 +29,7 @@
       context.memo('button.elfinder', function () {
         // create button
         var button = ui.button({
-          contents: '<i class="menu-icon mdi  mdi-cloud-upload"/></i>',
+          contents: '<i class="fas fa fa-upload"/></i>',
           tooltip: 'elfinder',
           click: function () {
              elfinderDialog(context);

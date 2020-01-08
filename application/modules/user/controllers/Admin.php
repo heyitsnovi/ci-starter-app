@@ -120,8 +120,12 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
- 				$data['custom_js']  = [base_url('assets/summernote/summernote-bs4.js'),base_url('assets/summernote/summernote-ext-elfinder.js')];
- 				$data['custom_css'] = [base_url('assets/summernote/summernote-bs4.css')];
+ 				$data['custom_js']  = [
+ 					base_url('assets/summernote/summernote-bs4.js'),
+ 					base_url('assets/summernote/summernote-ext-elfinder.js'),
+ 					base_url('adminlte/plugins/bootbox/bootbox.all.min.js')];
+
+ 				$data['custom_css'] = [base_url('assets/summernote/summernote-bs4.css'),base_url('adminlte/css/custom.css')];
  				$data['php_includes'] = [APPPATH.'/includes/summernote.php'];
  				$data['connector'] = base_url('user/ajaxrequest/filemanager_connector');
 				$data['view_content'] = 'summernote/index';

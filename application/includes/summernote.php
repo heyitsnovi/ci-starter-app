@@ -1,4 +1,5 @@
-<script src="<?php echo base_url('assets/js/require.js'); ?>"></script>
+<script src="<?php echo base_url('adminlte/js/require.js'); ?>"></script>
+
 <script>
     Promise.all([window.load_js()]).then(() => { 
        console.log('Filemanager Initialized...');
@@ -135,7 +136,7 @@
             require.config({
                 baseUrl : '<?php echo base_url('assets/elfinder/js');?>',
                 paths : {
-                    'jquery'   : '<?php echo base_url('assets/js/jquery.min'); ?>',
+                    'jquery'   : '<?php echo base_url('adminlte/plugins/jquery/jquery.min'); ?>',
                     'jquery-ui': '<?php echo base_url('assets/jquery-ui/jquery-ui.min'); ?>',
                     'elfinder' : 'elfinder.min',
                     'encoding-japanese': '<?php echo base_url('assets/js/encoding'); ?>',
@@ -161,7 +162,7 @@ $('#summernote').summernote({
             ['height', ['height']],
             ['table', ['table']],
             ['insert', ['link', 'picture', 'video', 'hr', 'readmore']],
-            ['genixcms', ['elfinder']],
+            //['genixcms', ['elfinder']],
             ['view', ['fullscreen', 'codeview']],
             ['help', ['help']]
         ],
@@ -171,6 +172,8 @@ $('#summernote').summernote({
 });
 
 function elfinderDialog(context){
+
+ 
     var fm = $('<div/>').dialogelfinder({
         url : "<?php echo $connector; ?>",
         lang : 'en',
@@ -190,5 +193,7 @@ function elfinderDialog(context){
         }
 
     }).dialogelfinder('instance');
+
+    $('.elfinder').addClass('elf-popup');
 }
 </script>
