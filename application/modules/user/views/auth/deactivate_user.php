@@ -11,15 +11,16 @@
    <?php echo form_hidden(array('id'=>$user->id)); ?>
 
     <label class="radio-inline">
-      <input type="radio" name="confirm" checked value="yes">Yes
+      <input type="radio" name="confirm" checked value="yes"> Yes
     </label>
+    <br>
     <label class="radio-inline">
-      <input type="radio" name="confirm" value="no">No
+      <input type="radio" name="confirm" value="no"> No
     </label>
      
     <br>
         <button type="submit" class="btn btn-success mr-2" name="new_group_btn">Submit</button>
-         <a href="<?php echo base_url('admin/users/'); ?>" class="btn btn-danger mr-2">Cancel</a> 
+         <a href="<?php echo base_url('user/admin/users'); ?>" class="btn btn-danger mr-2">Cancel</a> 
 
       <?php echo form_close();?>
     </div>

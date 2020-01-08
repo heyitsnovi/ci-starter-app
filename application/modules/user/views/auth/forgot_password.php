@@ -1,77 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
- 
-<head>
- 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>CI-Starter App</title>
- 
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/iconfonts/puse-icons-feather/feather.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/css/vendor.bundle.base.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/css/vendor.bundle.addons.css');?>">
- 
-  <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
- 
-  <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.png');?>" />
-</head>
+<html>
 
-<body>
-  <style>
-    #login-error-messages{
-      color:red;
-      font-weight: 20px;
+<!-- Mirrored from adminlte.io/themes/v3/pages/examples/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Dec 2019 01:13:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Start CI  | Forgot Password</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css');?>">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="<?= base_url('adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css');?>">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?= base_url('adminlte/css/adminlte.min.css');?>">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+</head>
+<body class="hold-transition login-page">
+  <style type="text/css">
+    .error-text{
+      color: red !important;
     }
   </style>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
-      <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
-        <div class="row w-100">
-          <div class="col-lg-4 mx-auto">
-
-            <div class="auto-form-wrapper">
-           <?php echo form_open("user/auth/forgot_password");?>
-              <div id="login-error-messages"><?php echo $message;?></div>
-                <div class="form-group">
-                  <label for="identity" class="label"><?php echo (($type=='email') ? sprintf(lang('forgot_password_email_label'), $identity_label) : sprintf(lang('forgot_password_identity_label'), $identity_label));?></label>
-                  <div class="input-group">
-                    <input type="text" class="form-control"  name="identity" placeholder="Email Address"  />
-                    <div class="input-group-append">
-                      <span class="input-group-text">
-                        <i class="mdi mdi-check-circle-outline"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
- 
-                <div class="form-group">
-                  <button class="btn btn-primary submit-btn btn-block">Reset Password</button>
-                </div>
-                <div class="form-group d-flex justify-content-between">
-            
-                  <a href="<?php echo base_url('user/auth/login');?>" class="text-small forgot-password text-black">Back To Login Page</a>
-                </div>
- 
-              
-              <?php echo form_close();?>
+<div class="login-box">
+  <div class="login-logo">
+    <a href="<?= base_url('user/auth/login');?>"><b>Starter</b>CI</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
+      <div class="error-text"><?php echo $message;?></div>
+       <?php echo form_open("user/auth/forgot_password");?>
+        <div class="input-group mb-3">
+         <input type="text" class="form-control"  name="identity" placeholder="Email Address"  />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
             </div>
-              <br>
-            <p class="footer-text text-center">copyright © <?php echo date('Y');?> CI-StartApp. All rights reserved.</p>
           </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block">Request new password</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      <?php echo form_close();?>
+
+      <p class="mt-3 mb-1">
+        <a href="<?php echo base_url('user/auth/login');?>">Login</a>
+      </p>
  
     </div>
- 
+    <!-- /.login-card-body -->
   </div>
- 
-  <script src="<?php echo base_url('assets/vendors/js/vendor.bundle.base.js');?>"></script>
-  <script src="<?php echo base_url('assets/vendors/js/vendor.bundle.addons.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/off-canvas.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/hoverable-collapse.html');?>"></script>
-  <script src="<?php echo base_url('assets/js/misc.js');?>"></script>
- 
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="<?php echo base_url('adminlte/plugins/jquery/jquery.min.js');?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo base_url('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo base_url('adminlte/js/adminlte.min.js');?>"></script>
 </body>
+
  
 </html>

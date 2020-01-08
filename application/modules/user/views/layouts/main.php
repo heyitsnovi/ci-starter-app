@@ -2,175 +2,220 @@
   $user = $this->ion_auth->user()->row(); 
   $group = $this->ion_auth->group()->result();
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+ <meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title><?php echo $page_title; ?></title>
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/css/vendor.bundle.base.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/vendors/css/vendor.bundle.addons.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><?= $page_title; ?></title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo base_url('adminlte/plugins/fontawesome-free/css/all.min.css');?>">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="<?php echo base_url('adminlte/css/adminlte.min.css');?>">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
   <?php
   if(isset($custom_css)){
     foreach($custom_css as $c_css){
-
       echo "<link rel=\"stylesheet\" href=\"".$c_css."\"> \n";
     }
   }
   ?>
-<link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.png');?>" />
+
 </head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?= base_url('user/admin'); ?>" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">About</a>
+      </li>
+    </ul>
 
-<body>
-  <div class="container-scroller">
-    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="<?php echo base_url('user/admin'); ?>">
-          <img src="<?php echo base_url('assets/images/starter_ci.png');?>" alt="logo" />
-        </a>
-        <a class="navbar-brand brand-logo-mini toggle-sidebar" href="#">
-          <img src="<?php echo base_url('assets/images/hamburger.png');?>" alt="logo" />
-        </a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center">
  
-        <ul class="navbar-nav navbar-nav-right">
- 
-          <li class="nav-item dropdown d-none d-xl-inline-block">
-            <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <span class="profile-text">Hello, <?php echo $user->username;?> !</span>
-              <img class="img-xs rounded-circle" src="<?php echo base_url('assets/images/faces/face1.jpg');?>" alt="Profile image">
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
- 
-              <a href="<?php echo base_url('user/admin/users/'); ?>" class="dropdown-item mt-2">
-                Manage Accounts
-              </a>
-              <a href="<?php echo base_url('user/auth/change_password'); ?>" class="dropdown-item">
-                Change Password
-              </a>
- 
-              <a  href="<?php echo base_url('user/auth/logout'); ?>" class="dropdown-item">
-                Sign Out
-              </a>
-            </div>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-          <span class="icon-menu"></span>
-        </button>
-      </div>
-    </nav>
 
-    <div class="container-fluid page-body-wrapper">
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item nav-profile">
-            <div class="nav-link">
-              <div class="user-wrapper">
-                <div class="profile-image">
-                  <img src="<?php echo base_url('assets/images/faces/face1.jpg');?>" alt="profile image">
-                </div>
-                <div class="text-wrapper">
-                  <p class="profile-name"><?php echo $user->username;?> </p>
-                  <div>
-                    <small class="designation text-muted"><?php echo $user->email; ?></small>
-                    <span class="status-indicator online"></span>
-                  </div>
-                </div>
-              </div>
-               
-            </div>
-          </li>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+ 
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"><?php echo $user->username;?></span>
+          <div class="dropdown-divider"></div>
+          <a href="<?= base_url('user/auth/logout'); ?>" class="dropdown-item">
+            <i class="fas fa-power-off mr-2"></i> Logout <?php echo $user->username;?>
+          </a>
+        </div>
+      </li>
+ 
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="<?= base_url('user/admin'); ?>" class="brand-link">
+      <img src="<?php echo base_url('adminlte/img/AdminLTELogo.png');?>"
+           alt="AdminLTE Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">CI Starter App</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="<?php echo base_url('adminlte/img/user2-160x160.jpg');?>" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block"><?php echo $user->username;?></a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('user/admin'); ?>">
-              <i class="menu-icon mdi mdi-television"></i>
-              <span class="menu-title">Dashboard</span>
+            <a href="<?= base_url('user/admin'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
             </a>
           </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('user/admin/file_manager'); ?>">
-                <i class="menu-icon mdi mdi-harddisk"></i>
-                <span class="menu-title">File Manager</span>
-              </a>
-            </li> 
+
+ 
+          <li class="nav-item">
+            <a href="<?= base_url('user/admin/file_manager'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                File Manager
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                User Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('user/admin/summernote'); ?>">
-                <i class="menu-icon mdi mdi-comment-text"></i>
-                <span class="menu-title">Summer Note</span>
-              </a>
-            </li>   
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
-              <i class="menu-icon mdi mdi-account"></i>
-              <span class="menu-title">User Management</span>
-              <i class="menu-arrow"></i>
+                <a href="<?= base_url('user/admin/users'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user/admin/groups'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User Groups</p>
+                </a>             
+            </ul>
+          </li>
+ 
+           <li class="nav-item">
+            <a href="<?= base_url('user/admin/summernote'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Summernote
+              </p>
             </a>
-            <div class="collapse" id="users">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url('user/admin/users'); ?>">User List</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url('user/admin/groups'); ?>">User Group</a>
-                </li>              
-              </ul>
-            </div>
-          </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('user/admin/settings'); ?>">
-                <i class="menu-icon mdi mdi-wrench"></i>
-                <span class="menu-title">Application Settings</span>
-              </a>
-            </li>    
+          </li>
+   
         </ul>
       </nav>
-
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <?php $this->load->view($view_content); ?>
-        </div>
-
-        <footer class="footer">
-          <div class="container-fluid clearfix">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <?php echo date('Y'); ?>
-              <a href="http://www.github.com/heyitsnovi" target="_blank">CI-StartApp</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">CodeIgniter Version: <?php echo CI_VERSION; ?>
-            </span>
-          </div>
-        </footer>
-      </div>
+      <!-- /.sidebar-menu -->
     </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1><?=  $page_title; ?></h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><?= $page_title; ?></li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content"><?php $this->load->view($view_content); ?></section>
+    <!-- /.content -->
   </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>CodeIgniter Version</b> <?= CI_VERSION; ?>
+    </div>
+    <strong>Copyright &copy; <?php echo date('Y');?> <a href="http://adminlte.io/">CI Starter App</a>.</strong> All rights
+    reserved.
+  </footer>
  
-  <script src="<?php echo base_url('assets/vendors/js/vendor.bundle.base.js');?>"></script>
-  <script src="<?php echo base_url('assets/vendors/js/vendor.bundle.addons.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/off-canvas.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/misc.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/dashboard.js');?>"></script>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="<?php echo base_url('adminlte/plugins/jquery/jquery.min.js');?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo base_url('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo base_url('adminlte/js/adminlte.min.js');?>"></script>
  
   <?php
 
   if(isset($custom_js)){
-
     foreach($custom_js as $c_js){
-
       echo "<script src=\"".$c_js."\"></script> \n";
-
     }
-
   }
 
   if(isset($php_includes)){
 
     foreach($php_includes as $php_inc){
-
       include($php_inc);
-
     }
-
   }
 
   ?>

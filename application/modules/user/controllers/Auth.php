@@ -437,6 +437,8 @@ class Auth extends CI_Controller
 	{
 		$this->data['title'] = $this->lang->line('create_user_heading');
 
+		$this->data['custom_css'] = [base_url('adminlte/css/custom.css')];
+
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
 		{
 			redirect('auth', 'refresh');
@@ -571,6 +573,10 @@ class Auth extends CI_Controller
 	public function edit_user($id)
 	{
 		$this->data['title'] = $this->lang->line('edit_user_heading');
+
+		$this->data['custom_css'] = [base_url('adminlte/css/custom.css')];
+
+		$this->data['custom_js'] = [base_url('adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js'),base_url('adminlte/js/demo.js')];
 
 		if (!$this->ion_auth->logged_in() || (!$this->ion_auth->is_admin() && !($this->ion_auth->user()->row()->id == $id)))
 		{
@@ -710,6 +716,9 @@ class Auth extends CI_Controller
 	 */
 	public function create_group()
 	{
+
+		$this->data['custom_css'] = [base_url('adminlte/css/custom.css')];
+		
 		$this->data['title'] = $this->lang->line('create_group_title');
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
