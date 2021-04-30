@@ -39,7 +39,7 @@
                         }
                         document.title = path? path + ':' + title : title;
                     }).bind('destroy', function() {
-                        document.title = title;
+                        
                     });
                 }
             },
@@ -162,7 +162,7 @@ $('#summernote').summernote({
             ['height', ['height']],
             ['table', ['table']],
             ['insert', ['link', 'picture', 'video', 'hr', 'readmore']],
-            //['genixcms', ['elfinder']],
+            ['genixcms', ['elfinder']],
             ['view', ['fullscreen', 'codeview']],
             ['help', ['help']]
         ],
