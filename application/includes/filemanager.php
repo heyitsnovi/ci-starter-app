@@ -36,9 +36,9 @@
                         if (cwd) {
                             path = fm.path(cwd.hash) || null;
                         }
-                        document.title = path? path + ':' + title : title;
+                         
                     }).bind('destroy', function() {
-                        document.title = title;
+                         
                     });
                 }
             },
