@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="<?php echo base_url('adminlte/css/adminlte.min.css');?>">
   <!-- Google Font: Source Sans Pro -->
  
+<link rel="stylesheet" href="<?php echo base_url('assets/elfinder/css/theme-bootstrap-libreicons-svg.css');?>">
 
   <?php
   if(isset($custom_css)){
