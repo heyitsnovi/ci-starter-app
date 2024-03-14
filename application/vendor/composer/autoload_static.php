@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit17acf229121e435f6fba605f25e11c24
+class ComposerStaticInit96ab6598b7f9f25e0a4dd4ea30aacc97
 {
     public static $prefixLengthsPsr4 = array (
         'c' => 
@@ -29,6 +29,7 @@ class ComposerStaticInit17acf229121e435f6fba605f25e11c24
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'RecursiveCallbackFilterIterator' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeLocalFileSystem.class.php',
         'elFinder' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinder.class.php',
         'elFinderAbortException' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinder.class.php',
@@ -44,8 +45,10 @@ class ComposerStaticInit17acf229121e435f6fba605f25e11c24
         'elFinderPluginNormalizer' => __DIR__ . '/..' . '/studio-42/elfinder/php/plugins/Normalizer/plugin.php',
         'elFinderPluginSanitizer' => __DIR__ . '/..' . '/studio-42/elfinder/php/plugins/Sanitizer/plugin.php',
         'elFinderPluginWatermark' => __DIR__ . '/..' . '/studio-42/elfinder/php/plugins/Watermark/plugin.php',
+        'elFinderPluginWinRemoveTailDots' => __DIR__ . '/..' . '/studio-42/elfinder/php/plugins/WinRemoveTailDots/plugin.php',
         'elFinderSession' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderSession.php',
         'elFinderSessionInterface' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderSessionInterface.php',
+        'elFinderTriggerException' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinder.class.php',
         'elFinderVolumeBox' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeBox.class.php',
         'elFinderVolumeDriver' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeDriver.class.php',
         'elFinderVolumeDropbox' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeDropbox.class.php',
@@ -58,6 +61,7 @@ class ComposerStaticInit17acf229121e435f6fba605f25e11c24
         'elFinderVolumeLocalFileSystem' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeLocalFileSystem.class.php',
         'elFinderVolumeMySQL' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeMySQL.class.php',
         'elFinderVolumeOneDrive' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeOneDrive.class.php',
+        'elFinderVolumeSFTPphpseclib' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeSFTPphpseclib.class.php',
         'elFinderVolumeTrash' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeTrash.class.php',
         'elFinderVolumeTrashMySQL' => __DIR__ . '/..' . '/studio-42/elfinder/php/elFinderVolumeTrashMySQL.class.php',
     );
@@ -65,9 +69,9 @@ class ComposerStaticInit17acf229121e435f6fba605f25e11c24
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit17acf229121e435f6fba605f25e11c24::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit17acf229121e435f6fba605f25e11c24::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit17acf229121e435f6fba605f25e11c24::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit96ab6598b7f9f25e0a4dd4ea30aacc97::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit96ab6598b7f9f25e0a4dd4ea30aacc97::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit96ab6598b7f9f25e0a4dd4ea30aacc97::$classMap;
 
         }, null, ClassLoader::class);
     }

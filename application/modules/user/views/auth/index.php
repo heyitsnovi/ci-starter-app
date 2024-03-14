@@ -11,7 +11,7 @@
               <p class="card-description">
 					<div id="infoMessage">
 						<?php
-		            		if(strlen($message)  > 0){
+		            		if($message!==NULL){
 		                  		echo '<div class="alert alert-info alert-dismissible"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'.$message.'</div>';
 		            		}
 		       			?>

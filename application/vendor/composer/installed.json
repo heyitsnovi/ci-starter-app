@@ -1,145 +1,177 @@
-[
-    {
-        "name": "chriskacerguis/codeigniter-restserver",
-        "version": "3.1.1",
-        "version_normalized": "3.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/chriskacerguis/codeigniter-restserver.git",
-            "reference": "6ced70d12c7e8d207eaded3f208a201330950b57"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/chriskacerguis/codeigniter-restserver/zipball/6ced70d12c7e8d207eaded3f208a201330950b57",
-            "reference": "6ced70d12c7e8d207eaded3f208a201330950b57",
-            "shasum": ""
-        },
-        "time": "2019-11-12T15:39:34+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "chriskacerguis\\RestServer\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Chris Kacerguis",
-                "email": "chriskacerguis@gmail.com"
-            }
-        ],
-        "description": "CI Rest Server"
-    },
-    {
-        "name": "firebase/php-jwt",
-        "version": "v5.0.0",
-        "version_normalized": "5.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/firebase/php-jwt.git",
-            "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-            "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": " 4.8.35"
-        },
-        "time": "2017-06-27T22:17:23+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Firebase\\JWT\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Neuman Vong",
-                "email": "neuman+pear@twilio.com",
-                "role": "Developer"
+{
+    "packages": [
+        {
+            "name": "chriskacerguis/codeigniter-restserver",
+            "version": "3.1.5",
+            "version_normalized": "3.1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chriskacerguis/codeigniter-restserver.git",
+                "reference": "63c5ccad5581c3e0035c400aa929ba1ef0822418"
             },
-            {
-                "name": "Anant Narayanan",
-                "email": "anant@php.net",
-                "role": "Developer"
-            }
-        ],
-        "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-        "homepage": "https://github.com/firebase/php-jwt"
-    },
-    {
-        "name": "studio-42/elfinder",
-        "version": "2.1.51",
-        "version_normalized": "2.1.51.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Studio-42/elFinder.git",
-            "reference": "783709d6b97cafba586b0aa61e48b271407821fb"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chriskacerguis/codeigniter-restserver/zipball/63c5ccad5581c3e0035c400aa929ba1ef0822418",
+                "reference": "63c5ccad5581c3e0035c400aa929ba1ef0822418",
+                "shasum": ""
+            },
+            "time": "2023-07-29T18:18:15+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "chriskacerguis\\RestServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Kacerguis",
+                    "email": "chriskacerguis@gmail.com"
+                }
+            ],
+            "description": "CI Rest Server",
+            "support": {
+                "issues": "https://github.com/chriskacerguis/codeigniter-restserver/issues",
+                "source": "https://github.com/chriskacerguis/codeigniter-restserver/tree/3.1.5"
+            },
+            "install-path": "../chriskacerguis/codeigniter-restserver"
         },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/783709d6b97cafba586b0aa61e48b271407821fb",
-            "reference": "783709d6b97cafba586b0aa61e48b271407821fb",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.2"
-        },
-        "suggest": {
-            "barryvdh/elfinder-flysystem-driver": "VolumeDriver for elFinder to use Flysystem as a root.",
-            "google/apiclient": "VolumeDriver GoogleDrive require `google/apiclient:^2.0.",
-            "kunalvarma05/dropbox-php-sdk": "VolumeDriver `Dropbox`2 require `kunalvarma05/dropbox-php-sdk.",
-            "nao-pon/flysystem-google-drive": "require in GoogleDrive network volume mounting with Flysystem."
-        },
-        "time": "2019-12-08T03:03:51+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.5.1",
+            "version_normalized": "5.5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "83b609028194aa042ea33b5af2d41a7427de80e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/83b609028194aa042ea33b5af2d41a7427de80e6",
+                "reference": "83b609028194aa042ea33b5af2d41a7427de80e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8 <=9"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
+            },
+            "time": "2021-11-08T20:18:51+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
                 "php"
-            ]
+            ],
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v5.5.1"
+            },
+            "install-path": "../firebase/php-jwt"
         },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Dmitry Levashov",
-                "email": "dio@std42.ru",
-                "homepage": "http://std42.ru"
+        {
+            "name": "studio-42/elfinder",
+            "version": "2.1.65",
+            "version_normalized": "2.1.65.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Studio-42/elFinder.git",
+                "reference": "5535a8677558c44a20c19ff9b97ec37702f9c44d"
             },
-            {
-                "name": "Troex Nevelin",
-                "email": "troex@fury.scancode.ru",
-                "homepage": "http://std42.ru"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/5535a8677558c44a20c19ff9b97ec37702f9c44d",
+                "reference": "5535a8677558c44a20c19ff9b97ec37702f9c44d",
+                "shasum": ""
             },
-            {
-                "name": "Naoki Sawada",
-                "email": "hypweb+elfinder@gmail.com",
-                "homepage": "http://xoops.hypweb.net"
+            "require": {
+                "php": ">=5.2"
             },
-            {
-                "name": "Community contributions",
-                "homepage": "https://github.com/Studio-42/elFinder/contributors"
-            }
-        ],
-        "description": "File manager for web",
-        "homepage": "http://elfinder.org"
-    }
-]
+            "suggest": {
+                "barryvdh/elfinder-flysystem-driver": "VolumeDriver for elFinder to use Flysystem as a root.",
+                "google/apiclient": "VolumeDriver GoogleDrive require `google/apiclient:^2.0.",
+                "kunalvarma05/dropbox-php-sdk": "VolumeDriver `Dropbox`2 require `kunalvarma05/dropbox-php-sdk.",
+                "nao-pon/flysystem-google-drive": "require in GoogleDrive network volume mounting with Flysystem."
+            },
+            "time": "2024-01-05T05:01:39+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitry Levashov",
+                    "email": "dio@std42.ru",
+                    "homepage": "http://std42.ru"
+                },
+                {
+                    "name": "Troex Nevelin",
+                    "email": "troex@fury.scancode.ru",
+                    "homepage": "http://std42.ru"
+                },
+                {
+                    "name": "Naoki Sawada",
+                    "email": "hypweb+elfinder@gmail.com",
+                    "homepage": "http://xoops.hypweb.net"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/Studio-42/elFinder/contributors"
+                }
+            ],
+            "description": "File manager for web",
+            "homepage": "http://elfinder.org",
+            "support": {
+                "issues": "https://github.com/Studio-42/elFinder/issues",
+                "source": "https://github.com/Studio-42/elFinder/tree/2.1.65"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/nao-pon",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../studio-42/elfinder"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
